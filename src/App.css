@@ -1,38 +1,359 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+a {
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
+
+/* Header Start*/
+.hd-main {
+  padding: 6px;
+}
+.hd-row {
+  height: 48px;
+  padding-right: 4px;
+  text-align: right;
+}
+.hd-col {
+  display: inline-block;
+}
+.hd-item {
+  display: inline-block;
+}
+.hd-item a {
+  font-size: 13px;
+  line-height: 30px;
+  color: #000000de;
+  font-weight: 500;
+  vertical-align: middle;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.hd-item-link {
+  padding-inline: 15px;
+}
+.apps-btn {
+  width: 40px;
+  height: 40px;
+  padding-top: 6px;
+  margin: 4px;
   text-align: center;
+  vertical-align: middle;
+}
+.apps-btn:hover {
+  border-radius: 50%;
+  cursor: pointer;
+  background: #eeeff1;
+}
+.apps-btn img {
+  opacity: 0.6;
+}
+.sign-btn {
+  width: 96px;
+  height: 36px;
+  font-size: 14px !important;
+  color: #fff !important;
+  margin: 0 8px;
+  border-radius: 4px;
+  line-height: 16px !important;
+  letter-spacing: 0.25px;
+  padding-block: 9px;
+  background: #1a73e8;
+  border: 1px solid transparent;
+  text-align: center;
+  font-family: "Roboto", sans-serif !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width: 600px) {
+  .sign-btn {
+    width: 80px;
   }
 }
+.sign-btn:hover {
+  background: #1765cc;
+  box-shadow: 0px 0px 2px #000;
+  text-decoration: none !important;
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Header End */
+
+/* Body Start */
+
+.logo {
+  min-height: 92px;
+  height: calc(100vh - 560px);
+  max-height: 290px;
+  box-sizing: border-box;
+}
+.logo div {
+  max-height: 92px;
+  position: relative;
+  height: 100%;
+  margin-top: auto;
+}
+.logo div img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  width: auto;
+}
+
+.search-bar {
   display: flex;
-  flex-direction: column;
+  z-index: 3;
+  position: relative;
+  min-height: 44px;
+  background: #fff;
+  border: 1px solid #dfe1e5;
+  box-shadow: none;
+  border-radius: 24px;
+  margin: 26px auto;
+  width: 638px;
+  width: auto;
+  max-width: 584px;
+}
+
+.div1 {
+  flex: 1;
+  display: flex;
+  padding: 5px 8px 0 14px;
+}
+
+.search-bar:hover,
+.search-bar:active {
+  box-shadow: 0px 1px 5px #c6c7c8;
+}
+
+.div-search-icon {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-right: 13px;
+  margin-top: -5px;
+  height: 46px;
 }
 
-.App-link {
-  color: #61dafb;
+.span-search-icon {
+  height: 20px;
+  line-height: 20px;
+  width: 20px;
+  margin-top: 6px;
+  color: #9aa0a6;
+  display: inline-block;
+  fill: currentColor;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.span-search-icon svg {
+  display: block;
+  height: 100%;
+  width: 100%;
 }
+
+.mic-icon,
+.camera-icon {
+  margin-top: 3px;
+  padding-inline: 8px;
+}
+
+.mic-icon svg,
+.camera-icon svg {
+  height: 24px;
+  width: 24px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.input-field {
+  margin-top: 5px;
+  width: calc(100% - 105px);
+  padding-bottom: 8px;
+}
+.input-field input {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.search-btn,
+.lucky-btn {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  margin: 3px 6px 13px;
+  padding: 0 16px;
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.search-btn:hover,
+.lucky-btn:hover {
+  border: 1px solid #c6c7c8;
+  box-shadow: 0px 0px 1px #c6c7c8;
+}
+
+.lg-lab {
+  display: inline-block;
+  margin-inline: 2px;
+}
+.google-language {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #4d5156;
+  /* font-size: small; */
+  font-size: 13px;
+  line-height: 28px;
+  display: inline-block;
+}
+
+.google-language a {
+  padding: 0 3px;
+  color: #1a0dab;
+  display: inline-block;
+  margin: 0 1.8px;
+  white-space: nowrap;
+}
+/* Body End */
+/* Footer Start */
+
+footer {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f2f2f2;
+}
+
+.country {
+  padding: 12.3px 30px;
+  border-bottom: 1px solid #dadce0;
+  font-size: 15px;
+  color: #202124;
+}
+
+.footer-options {
+  padding: 0px 20px;
+}
+
+.footer-options a {
+  display: block;
+  padding: 12.5px 15px;
+  font-size: 14px;
+  color: #202124;
+  white-space: nowrap;
+}
+
+/* Footer End */
+
+/* App PopUp Start */
+
+.app-popup {
+  top: 65px;
+  right: 25px;
+  position: absolute;
+  border-radius: 28px;
+  width: 344px;
+  height: 440px;
+  overflow: auto;
+  z-index: 5;
+  padding: 8px;
+  background: #e9eef6;
+  box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 2px 6px 2px rgba(60,64,67,.15);
+}
+
+.popup-main {
+  border-radius: 28px;
+  background: #fff; 
+  padding: 10px 30px;
+}
+
+.apps-icon {
+  height: 84px;
+  width: 84px;
+  padding: 6px;
+  margin-top: 10px !important;
+}
+
+.apps-icon a .app-img {
+  display: inline-block;
+  height: 53px;
+  vertical-align: top;
+  width: 53px;
+  height: 57px;
+  margin-top: 5px;
+  border-radius: 16px;
+  background-image: url(https://ssl.gstatic.com/gb/images/sprites/p_2x_a6cad964874d.png);
+  background-size: 53px 2547px;
+}
+
+.img1 {
+  background-position: 0 -1798px;
+}
+.img2 {
+  background-position: 0 -1392px;
+}
+.img3 {
+  background-position: 0 -1044px;
+}
+.img4 {
+  background-position: 0 -2378px;
+}
+.img5 {
+  background-position: 0 -290px;
+}
+.img6 {
+  background-position: 0 -1334px;
+}
+.img7 {
+  background-position: 0 -2436px;
+}
+.img8 {
+  background-position: 0 -348px;
+}
+.img9 {
+  background-position: 0 -580px;
+}
+.img10 {
+  background-position: 0 -1624px;
+}
+.img11 {
+  background-position: 0 -116px;
+}
+.img12 {
+  background-position: 0 -1276px;
+}
+.img13 {
+  background-position: 0 -1682px;
+}
+.img14 {
+  background-position: 0 -870px;
+}
+.img15 {
+  background-position: 0 -986px;
+}
+.img16 {
+  background-position: 0 -174px;
+}
+
+.apps-icon a .app-title {
+  color: #202124;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.09px;
+  line-height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 76px;
+}
+
+/* App PopUp End */
